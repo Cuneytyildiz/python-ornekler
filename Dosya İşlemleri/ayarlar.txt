@@ -1,0 +1,11 @@
+ilkkez=False
+lisans=Deneme
+serial=123456
+kullaniciadi=
+
+
+
+
+
+
+
