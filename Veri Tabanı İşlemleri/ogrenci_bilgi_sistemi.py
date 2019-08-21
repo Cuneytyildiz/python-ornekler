@@ -17,10 +17,8 @@ def ogrenciBilgi(ogrenciAdi):
 def dersNotu(ogrenciAdi):
     numara = cursor.execute("SELECT ogrenci_no FROM ogrenciler WHERE ogrenci_ad = ? ",(ogrenciAdi,))
     numara = numara.fetchone()[0] # İlk satırda ne varsa onu döndürür ve dizinin 0. elemanı alır
-    print(type(numara))
     notlar = cursor.execute("SELECT * FROM dersNotlari WHERE ogrenci_no = ?",(numara,))
     a = notlar.fetchall()
-    print(type(a))
     print("MATEMATİK : ",a[0][1],"FİZİK : ",a[0][2],"KİMYA : ",a[0][3],"BİYOLOJİ : ",a[0][4])
     time.sleep(3)
 
